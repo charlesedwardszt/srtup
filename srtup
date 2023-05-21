@@ -1,0 +1,18 @@
+def bubble_sort(array)
+  n = array.length
+  loop do
+    swapped = false
+    (n - 1).times do |i|
+      if array[i] > array[i + 1]
+        array[i], array[i + 1] = array[i + 1], array[i]
+        swapped = true
+      end
+    end
+    break unless swapped
+  end
+  array
+end
+
+numbers = [7, 3, 9, 2, 1, 6, 5, 8, 4]
+sorted_numbers = bubble_sort(numbers)
+puts "Отсортированный массив: #{sorted_numbers}"
